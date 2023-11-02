@@ -1,3 +1,20 @@
+<script setup>
+import { ref } from 'vue';
+import { useIndexStore } from '@/stores/store.js'
+const store = useIndexStore()
+
+
+const usuario = ref({
+    usuario: null,
+    contrasena: null,
+})
+const onSubmit = () => {
+    console.log(usuario.value.usuario)
+    if (usuario.value.usuario === store.usuario.usuario && usuario.value.contrasena === store.usuario.contrasena) {
+        navigateTo('/votacion')
+    }
+}
+</script>
 <template>
     <div class="min-h-screen fondo grid content-between">
         <div class="hero pt-8">
@@ -9,26 +26,28 @@
 
                 </div>
                 <div class="card shadow-2xl bg-slate-900">
-                    <form class="card-body">
+                    <form class="card-body" @submit.prevent="onSubmit">
                         <h1 class="text-5xl font-bold mb-6">Iniciar sesión</h1>
 
                         <div class="form-control">
                             <label class="label">
                                 <span class="label-text">Usuario</span>
                             </label>
-                            <input type="email" placeholder="Usuario" class="input input-bordered" required />
+                            <input type="text" v-model="usuario.usuario" placeholder="Usuario" class="input input-bordered"
+                                required />
                         </div>
                         <div class="form-control">
                             <label class="label">
                                 <span class="label-text">Contraseña</span>
                             </label>
-                            <input type="password" placeholder="Contraseña" class="input input-bordered" required />
+                            <input type="password" v-model="usuario.contrasena" placeholder="Contraseña"
+                                class="input input-bordered" required />
                             <label class="label">
                                 <a href="#" class="label-text-alt link link-hover">¿Has olvidado tu contraseña?</a>
                             </label>
                         </div>
                         <div class="form-control mt-6">
-                            <button class="btn btn-primary">Iniciar sesión</button>
+                            <button class="btn btn-primary" type="submit">Iniciar sesión</button>
                         </div>
                     </form>
                 </div>
