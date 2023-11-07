@@ -1,8 +1,6 @@
 <script setup>
 import { ref, onMounted } from "vue";
 import { useIndexStore } from "@/stores/store.js";
-import Chart from "primevue/chart";
-
 const store = useIndexStore();
 
 const usuario = ref({
@@ -77,7 +75,7 @@ const onSubmit = () => {
     <FooterVotacion />
   </div>
 </template>
-<style>
+<style scoped>
 .fondo {
   background-image: linear-gradient(
     to right bottom,

@@ -63,9 +63,22 @@ export default {
     <FooterVotacion></FooterVotacion>
   </div>
 </template>
-
-<style>
-/* * {
-    border: 1px solid red;
-} */
+<style scoped>
+.fondo {
+  background-image: linear-gradient(
+    to right bottom,
+    #230d60,
+    #230d5a,
+    #220c54,
+    #210c4f,
+    #200c49,
+    #1e0e46,
+    #1c0f44,
+    #1a1041,
+    #161240,
+    #13143e,
+    #10153d,
+    #0e163b
+  );
+}
 </style>
