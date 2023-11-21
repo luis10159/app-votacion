@@ -11,7 +11,7 @@ const usuario = ref({
 const onSubmit = () => {
     console.log(usuario.value.usuario)
     if (usuario.value.usuario === store.usuario.usuario && usuario.value.contrasena === store.usuario.contrasena) {
-        navigateTo('/votacion')
+        navigateTo('/inicio')
     }
 }
 </script>
