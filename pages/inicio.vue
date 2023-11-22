@@ -4,7 +4,7 @@ const store = useIndexStore();
 
 </script>
 <template>
-    <div class="text-center  min-h-screen bg-sky-950 grid content-between fondo">
+    <div class="text-center  min-h-screen fondo grid content-between fondo">
         <Header></Header>
         <!-- Contenido -->
         <AdminInicio v-if="store.adminInicio"></AdminInicio>
@@ -12,6 +12,7 @@ const store = useIndexStore();
         <VerCandidatos v-if="store.candidatos"></VerCandidatos>
         <VerVotacion v-if="store.registroVotacion"></VerVotacion>
         <VerElecciones v-if="store.elecciones"></VerElecciones>
+        <ConteoReal v-if="store.conteoReal"></ConteoReal>
         <FooterVotacion></FooterVotacion>
 
     </div>

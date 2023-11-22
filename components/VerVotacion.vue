@@ -1,3 +1,10 @@
+<script setup>
+import { useIndexStore } from "@/stores/store";
+const store = useIndexStore();
+const conteo = () => {
+    store.CaConteoReal();
+};
+</script>
 <template>
         <div class="text-center py-10">
             <h1 class="text-4xl text-amber-400 font-bold">Elige</h1>
@@ -42,8 +49,8 @@
                 </div>
             </div>
         </div>
-        <div class="card-actions justify-center">
-            <button class="btn btn-outline btn-primary">Conteo en tiempo real</button>
+        <div class="card-actions justify-center pb-6">
+            <button class="btn btn-outline btn-primary" @click="conteo">Conteo en tiempo real</button>
         </div>
 </template>
 

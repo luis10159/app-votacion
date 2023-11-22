@@ -20,6 +20,9 @@ const inicio = () => {
 const votar = () => {
     store.CaRegistroVotacion();
 }
+const conteo = () => {
+    store.CaConteoReal();
+}
 
 const salir = () => {
     navigateTo("/")
@@ -75,6 +78,12 @@ const salir = () => {
                                 <a @click="votar">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8l4 4-4 4M8 12h7"/></svg>
                                     Votar
+                                </a>
+                            </li>
+                            <li>
+                                <a @click="conteo">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8l4 4-4 4M8 12h7"/></svg>
+                                    Conteo
                                 </a>
                             </li>
                         </ul>
