@@ -13,9 +13,7 @@ const onSubmit = () => {
     usuario.value.usuario === store.usuario.usuario &&
     usuario.value.contrasena === store.usuario.contrasena
   ) {
-    navigateTo("/votacion");
-  } else {
-    alert("Usuario o contraseña incorrectos");
+    navigateTo("/inicio");
   }
 };
 </script>
